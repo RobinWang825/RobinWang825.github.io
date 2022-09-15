@@ -148,6 +148,175 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-污点分析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/09/15/%E6%B1%A1%E7%82%B9%E5%88%86%E6%9E%90/">固件+污点分析+静态</a>
+    </h1>
+  
+
+        
+        ```html
+
+```
+
+<a href="/2022/09/15/%E6%B1%A1%E7%82%B9%E5%88%86%E6%9E%90/" class="archive-article-date">
+  	<time datetime="2022-09-15T11:18:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-15</time>
+</a>
+
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Firmalice-Automatic-Detection-of-Authentication-Bypass-Vulnerabilities-in-Binary-Firmware-NDSS-2015"><a href="#Firmalice-Automatic-Detection-of-Authentication-Bypass-Vulnerabilities-in-Binary-Firmware-NDSS-2015" class="headerlink" title="Firmalice-Automatic Detection of Authentication Bypass Vulnerabilities in Binary Firmware, NDSS 2015"></a>Firmalice-Automatic Detection of Authentication Bypass Vulnerabilities in Binary Firmware, NDSS 2015</h1><ul>
+<li>方案：Firmalice（作者是Angr的作者）</li>
+<li>技术：静态分析，单独分析，黑盒，二进制，基于符号执行和程序切片</li>
+<li>点评：提供了一个框架，用于检测基于符号执行和程序切片的二进制固件中的身份验证绕过漏洞（后门）。 然而，它受到约束求解器的压倒性影响。一个通用模型来描述二进制固件中的后门，并结合动态符号执行来识别它们。先使用静态分析提取数据依赖图，然后提取从入口点到手动确定的特权操作位置的程序切片，应用符号执行引擎找到可能成功的路径。支持多个架构。</li>
+<li>资源：<a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2015/ndss-2015-programme/firmalice-automatic-detection-authentication-bypass-vulnerabilities-binary-firmware/">https://www.ndss-symposium.org/ndss2015/ndss-2015-programme/firmalice-automatic-detection-authentication-bypass-vulnerabilities-binary-firmware/</a></li>
+<li>自己的yuque笔记：<a target="_blank" rel="noopener" href="https://www.yuque.com/wangshi-zqaaq/niuaql/et32rt">切片技术</a></li>
+<li>概括总结：Firmalice提出了一个新颖的认证旁路漏洞模型，通过<strong>程序切片</strong>技术将程序分析的目标<strong>缩小到</strong>认证逻辑相关的范围，使得可以对<strong>轻量级</strong>的切片程序进行符号化执行分析，解决了符号化执行无法分析复杂程序的问题。而且Firmalice提高了在检测固件认证旁路漏洞的自动化程度，减少了大量的人力工作。</li>
+</ul>
+<ul>
+<li>轻量级的切片程序，<strong>专注于关注的问题，缩小程序分析的范围</strong> eg: FIoT专注于内存损坏型的代码，Firmalice专注于“认证逻辑”相关的代码</li>
+<li>Firmalice提出了一个新颖的认证旁路漏洞模型，通过<strong>程序切片</strong>技术将程序分析的目标<strong>缩小到</strong>认证逻辑相关的范围，使得可以对<strong>轻量级</strong>的切片程序进行符号化执行分析，解决了符号化执行无法分析复杂程序的问题。而且Firmalice提高了在检测固件认证旁路漏洞的自动化程度，减少了大量的人力工作。</li>
+</ul>
+<h1 id="Automated-dynamic-firmware-analysis-at-scale-A-case-study-on-embedded-web-interfaces-ACM-ASIACCS-2016"><a href="#Automated-dynamic-firmware-analysis-at-scale-A-case-study-on-embedded-web-interfaces-ACM-ASIACCS-2016" class="headerlink" title="Automated dynamic firmware analysis at scale: A case study on embedded web interfaces, ACM ASIACCS 2016"></a>Automated dynamic firmware analysis at scale: A case study on embedded web interfaces, ACM ASIACCS 2016</h1><ul>
+<li>技术：基于全模拟，静态和动态分析工具（应用级别模拟qemu），强假设，分析所有组件</li>
+<li>点评：用于发现嵌入式固件web中的漏洞。任何给定的功能通常都依赖于多个程序的执行，分析所有组件。提供了一个混合静态分析和仿真来分析嵌入式 Web 界面的框架。 然而，他们的技术不是通用的，不能检测以前未知的内存损坏漏洞，并且依赖于各种启发式模拟。</li>
+</ul>
+<h1 id="Scalable-graph-based-bug-search-for-firmware-images-ACM-CCS-2016"><a href="#Scalable-graph-based-bug-search-for-firmware-images-ACM-CCS-2016" class="headerlink" title="Scalable graph-based bug search for firmware images, ACM CCS 2016"></a>Scalable graph-based bug search for firmware images, ACM CCS 2016</h1><ul>
+<li>方案：Genius</li>
+<li>技术：基于代码分析；基于模式匹配（代码相似性）的静态分析方法</li>
+<li>点评：将CFG转换为高级数字特征向量，对跨架构的代码鲁棒性更强</li>
+</ul>
+<h1 id="⭐️DTaint-Detecting-the-Taint-style-Vulnerability-in-Embedded-Device-Firmware-IEEE-DSN-2018"><a href="#⭐️DTaint-Detecting-the-Taint-style-Vulnerability-in-Embedded-Device-Firmware-IEEE-DSN-2018" class="headerlink" title="⭐️DTaint: Detecting the Taint-style Vulnerability in Embedded Device Firmware, IEEE DSN 2018"></a>⭐️DTaint: Detecting the Taint-style Vulnerability in Embedded Device Firmware, IEEE DSN 2018</h1><ul>
+<li><p>方案：DTaint</p>
+</li>
+<li><p>技术：静态二进制分析，污点追踪</p>
+</li>
+<li><p>点评：第一个提出不依赖于源码或模拟固件运行的；专注于recv等类似函数生成的数据，但忽略了前端文件的语义。</p>
+</li>
+<li><p>针对固件，未开源</p>
+<p>执行的是自底向上的过程间数据流分析，是为了减小重复遍历被调用函数的开销</p>
+</li>
+</ul>
+<h1 id="Saint-Sensitive-Information-Tracking-in-Commodity-IoT-USENIX-2018"><a href="#Saint-Sensitive-Information-Tracking-in-Commodity-IoT-USENIX-2018" class="headerlink" title="Saint: Sensitive Information Tracking in Commodity IoT, USENIX 2018"></a>Saint: Sensitive Information Tracking in Commodity IoT, USENIX 2018</h1><ul>
+<li>方案：Saint</li>
+<li>技术：静态源码分析，污点分析</li>
+<li>点评：针对物联网应用程序（非C/C++语言编写），开源针对IOT的数据集IOTBench</li>
+<li>没把工具开源，公开的工具网页不能用</li>
+<li>反向污点分析+剪枝的思想，可以借鉴</li>
+<li>针对的是SmartThings，不普适<ul>
+<li><strong>NDSS  21</strong>有一篇基于SmartThings的工作，叫<strong>IoTSafe</strong>(未开源)。<strong>主要是采用静态和动态测试技术去识别运行时的物理交互</strong>。</li>
+<li>IOTSAFE: Enforcing Safety and Security Policy with Real IoT Physical Interaction Discovery,</li>
+<li>yuque笔记：<a target="_blank" rel="noopener" href="https://www.yuque.com/wangshi-zqaaq/niuaql/mgwn8d">Saint</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="⭐️KARONTE-Detecting-Insecure-Multi-binary-Interactions-in-Embedded-Firmware-IEEE-S-amp-P-2020"><a href="#⭐️KARONTE-Detecting-Insecure-Multi-binary-Interactions-in-Embedded-Firmware-IEEE-S-amp-P-2020" class="headerlink" title="⭐️KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware, IEEE S&amp;P 2020"></a>⭐️KARONTE: Detecting Insecure Multi-binary Interactions in Embedded Firmware, IEEE S&amp;P 2020</h1><ul>
+<li>方案：KARONTE</li>
+<li>技术：静态分析，关联考虑跨二进制</li>
+<li>点评：关注跨二进制，后端，忽略了前端可能会漏报。 Web 服务器和二进制文件之间的通用进程间通信 (IPC) 范式作为分析的起点。然而，大量的IPC接口带来了大量的过度分析，从而导致许多误报。</li>
+</ul>
+<h1 id="Sharing-More-and-Checking-Less-Leveraging-Common-Input-Keywords-to-Detect-Bugs-in-Embedded-Systems-USENIX-2021"><a href="#Sharing-More-and-Checking-Less-Leveraging-Common-Input-Keywords-to-Detect-Bugs-in-Embedded-Systems-USENIX-2021" class="headerlink" title="Sharing More and Checking Less: Leveraging Common Input Keywords to Detect Bugs in Embedded Systems, USENIX 2021"></a>Sharing More and Checking Less: Leveraging Common Input Keywords to Detect Bugs in Embedded Systems, USENIX 2021</h1><ul>
+<li><p>方案：SaTC</p>
+</li>
+<li><p>技术：利用前后端共享关键字作为污点分析开始位置，降低符号执行复杂度</p>
+</li>
+<li><p>点评：基于前后端共享关键字来指导漏洞挖掘</p>
+</li>
+<li><p>代码：在Karonte污点分析的基础上，加上了前后端相关的分析，也用了一些开源工具</p>
+</li>
+<li><p>未来期望</p>
+<ul>
+<li>SaTC未来的工作,对于加密或模糊后的数据,不能很好的识别,关注现有的<strong>反混淆技术</strong></li>
+<li>隐式关键字处理，尝试寻找隐藏模式,更好的处理前后端之间的关系</li>
+</ul>
+</li>
+<li><p>实现</p>
+<ol>
+<li>编程语言 –&gt; python</li>
+<li>XML解析 –&gt; 标准库</li>
+<li>JavaScript –&gt; Js2py</li>
+<li>input Recongnition –&gt; Ghidra &amp; extended <strong>kartonte’s</strong> cpf</li>
+<li>taint engine –&gt; angr</li>
+<li>MIPS fix</li>
+</ol>
+</li>
+</ul>
+<h1 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h1><p>Automatic Vulnerability Detection in Embedded Devices and Firmware: Survey and Layered Taxonomies, ACM Computing Surveys 2021 <a target="_blank" rel="noopener" href="https://dl.acm.org/doi/pdf/10.1145/3432893">pdf</a> <a target="_blank" rel="noopener" href="https://www.yuque.com/wangshi-zqaaq/niuaql/vz3s8g">yuque笔记</a></p>
+<p>物联网固件安全缺陷检测研究进展, 信息安全学报 2021</p>
+<p>嵌入式设备固件安全分析技术研究, 计算机学报 2021</p>
+<p>物联网设备漏洞挖掘技术研究综述, 信息安全学报 2021</p>
+<p>物联网设备软件安全综述, 广州大学学报 2019</p>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_49393427/article/details/117625901?spm=1001.2101.3001.6650.6&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-6-117625901-blog-86063133.pc_relevant_multi_platform_whitelistv3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-6-117625901-blog-86063133.pc_relevant_multi_platform_whitelistv3&utm_relevant_index=7">基于固件的漏洞挖掘方法梳理</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">论文</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">污点分析</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">固件</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/09/15/%E6%B1%A1%E7%82%B9%E5%88%86%E6%9E%90/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-github报错remote-Support-for-password-authentication-was-removed-on-August-13-2021" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -335,7 +504,20 @@
 <p><a target="_blank" rel="noopener" href="https://robinwang825.github.io/">https://robinwang825.github.io</a></p>
 <p>你就会发现你的博客已经上线了，可以在网络上被访问了。</p>
 <h2 id="文件目录解释"><a href="#文件目录解释" class="headerlink" title="文件目录解释"></a>文件目录解释</h2><p><code>_config.yml</code><br>网站的配置信息，您可以在此配置大部分的参数。<br><code>package.json</code><br>应用程序的信息。<br>EJS、Stylus和 Markdown renderer 已默认安装，您可以自由移除。<br><code>scaffolds</code><br>模版文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。<br>Hexo的模板是指在新建的markdown文件中默认填充的内容。<br>例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。<br><code>source</code><br>资源文件夹是存放用户资源的地方。<br>除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。<br>Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。<br>也就是你写的markdown存在这里面就会自动被包含到博客页面。<br><code>themes</code><br>主题文件夹。Hexo的博客主题存在这里面，你可以去网上下载好看的主题或者自己写。</p>
-<h2 id="一些可能遇见的问题"><a href="#一些可能遇见的问题" class="headerlink" title="一些可能遇见的问题"></a>一些可能遇见的问题</h2><p>解决 hexo init 卡顿问题 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a409601734f1">https://www.jianshu.com/p/a409601734f1</a></p>
+<h1 id="三、hexo常见问题"><a href="#三、hexo常见问题" class="headerlink" title="三、hexo常见问题"></a>三、hexo常见问题</h1><h2 id="1-hexo-init卡顿问题"><a href="#1-hexo-init卡顿问题" class="headerlink" title="1. hexo init卡顿问题"></a>1. hexo init卡顿问题</h2><p>解决 hexo init 卡顿问题 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a409601734f1">https://www.jianshu.com/p/a409601734f1</a></p>
+<h2 id="2-Hexo部署出现错误err-Error-Spawn-failed解决方式"><a href="#2-Hexo部署出现错误err-Error-Spawn-failed解决方式" class="headerlink" title="2. Hexo部署出现错误err: Error: Spawn failed解决方式"></a>2. Hexo部署出现错误err: Error: Spawn failed解决方式</h2><p>部署过程中可能会出现错误</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">fatal:</span> unable to access <span class="string">&#x27;https://github.com/a956551943/a956551943.github.io/&#x27;</span>: Encountered <span class="keyword">end</span> of file</span><br><span class="line">FATAL &#123;</span><br><span class="line">  <span class="symbol">err:</span> <span class="symbol">Error:</span> Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (<span class="regexp">/usr/local</span><span class="regexp">/src/hexo</span><span class="regexp">/hanyubolg/node</span>_modules/hexo-util/lib/spawn.<span class="symbol">js:</span><span class="number">51</span><span class="symbol">:</span><span class="number">21</span>)</span><br><span class="line">      at ChildProcess.emit (events.<span class="symbol">js:</span><span class="number">376</span><span class="symbol">:</span><span class="number">20</span>)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (internal/child_process.<span class="symbol">js:</span><span class="number">277</span><span class="symbol">:</span><span class="number">12</span>) &#123;</span><br><span class="line">    <span class="symbol">code:</span> <span class="number">128</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something<span class="string">&#x27;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</span></span><br></pre></td></tr></table></figure>
+
+<p>解决方式一：（已经尝试，有效）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录,这个是自己博客所在文件夹</span></span><br><span class="line"><span class="built_in">cd</span> Desktop/mywebdaily  </span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line">rm -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>解决方式二：有可能是你的git repo配置地址不正确,可以将http方式变更为ssh方式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line">vim _config.yml</span><br><span class="line"></span><br><span class="line"><span class="comment">##修改</span></span><br><span class="line">deploy:</span><br><span class="line"></span><br><span class="line"><span class="built_in">type</span>: git</span><br><span class="line"></span><br><span class="line">repo: https://github.com/yourname/yourname.github.io.git -&gt; git@github.com:a956551943/weixiaohui.github.io.git</span><br><span class="line"></span><br><span class="line">branch: master</span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_28914371/article/details/112655689">安装 node_Mac下的Node.js安装教程</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3b30c4c846d1">命令行安装node.js</a></p>
 <p>gitee+hexo: <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43960457/article/details/108887889">https://blog.csdn.net/weixin_43960457/article/details/108887889</a></p>
 <p>hexo+git/gitee: <a target="_blank" rel="noopener" href="https://blog.csdn.net/L19iii/article/details/113077513">https://blog.csdn.net/L19iii/article/details/113077513</a></p>
@@ -495,7 +677,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 wwjloves2study
+    		&copy; 2022 wwjloves2study
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -590,6 +772,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">实战</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">论文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">污点分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">固件</a>
               </li>
             
             <div class="clearfix"></div>
