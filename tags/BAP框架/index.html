@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>“github+hexo搭建个人博客” | Robin&#39;s Blog</title>
+  <title>Tag: BAP框架 | Robin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、环境准备 nodejs npm  1. npm首先配置npm的淘宝源,安装完成后可通过npm info hexo查看是否配置淘宝源成功： 12npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.orgapt install npm  2. node安装先用普通的apt工具安装低版本的node，然后再升级最新。sudo apt-get inst">
-<meta property="og:type" content="article">
-<meta property="og:title" content="“github+hexo搭建个人博客”">
-<meta property="og:url" content="http://example.com/2021/11/14/github-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Robin&#39;s Blog">
+<meta property="og:url" content="http://example.com/tags/BAP%E6%A1%86%E6%9E%B6/index.html">
 <meta property="og:site_name" content="Robin&#39;s Blog">
-<meta property="og:description" content="一、环境准备 nodejs npm  1. npm首先配置npm的淘宝源,安装完成后可通过npm info hexo查看是否配置淘宝源成功： 12npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.orgapt install npm  2. node安装先用普通的apt工具安装低版本的node，然后再升级最新。sudo apt-get inst">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-11-14T14:17:17.000Z">
-<meta property="article:modified_time" content="2021-11-15T10:04:20.409Z">
 <meta property="article:author" content="wwjloves2study">
-<meta property="article:tag" content="实战">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Robin&#39;s Blog" type="application/atom+xml">
@@ -151,291 +146,74 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-github-hexo搭建个人博客" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      “github+hexo搭建个人博客”
-    </h1>
-  
-
-        
-        ```html
-
-        <!-- 不蒜子统计 -->
-        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	```html
 
 ```
 
-<a href="/2021/11/14/github-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2021-11-14T14:17:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-14</time>
+<a href="/2022/09/17/%E5%9F%BA%E4%BA%8EBAP%E6%A1%86%E6%9E%B6%E5%92%8Cangr%E6%A1%86%E6%9E%B6%E7%9A%84%E8%AE%BA%E6%96%87/" class="archive-article-date">
+  	<time datetime="2022-09-17T11:10:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-17</time>
 </a>
 
 
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h1><ul>
-<li>nodejs</li>
-<li>npm</li>
-</ul>
-<h2 id="1-npm"><a href="#1-npm" class="headerlink" title="1. npm"></a>1. npm</h2><p>首先配置npm的<strong>淘宝源</strong>,安装完成后可通过npm info hexo查看是否配置淘宝源成功：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br><span class="line">apt install npm</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-node"><a href="#2-node" class="headerlink" title="2. node"></a>2. node</h2><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>先用普通的apt工具安装低版本的node，然后再升级最新。<br><code>sudo apt-get install node</code></p>
-<p>删除nodejs</p>
-<p><code>apt-get remove nodejs</code></p>
-<p>Ubuntu安装更新版本的工具N，执行：<br><code>sudo npm install n -g</code></p>
-<p>更新新node版本，执行：<br><code>sudo n stable</code></p>
-<h4 id="可能出现node错误-usr-bin-env-node-No-such-file-or-directory"><a href="#可能出现node错误-usr-bin-env-node-No-such-file-or-directory" class="headerlink" title="可能出现node错误 /usr/bin/env: node: No such file or directory"></a>可能出现node错误 /usr/bin/env: node: No such file or directory</h4><h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><ol>
-<li><p>执行一个npm命令怎么提示/usr/bin/env这个错误…</p>
-<p>创建一个软连接，如下：</p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/bin/nodejs /usr/bin/node</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>因为npm执行的时候默认是使用/usr/bin/node去执行的，但我本地是没有/usr/bin/node的，所以需要创建一个</li>
-</ol>
-<p>所以需要创建一个软连接将自己的node的执行文件指到/usr/bin/node上，于是修改如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/NODEJS_HOME/bin/node /usr/bin/node</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Qevery678/article/details/104803433">https://blog.csdn.net/Qevery678/article/details/104803433</a></p>
-<h1 id="二、Hexo"><a href="#二、Hexo" class="headerlink" title="二、Hexo"></a>二、Hexo</h1><h2 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1. 安装hexo"></a>1. 安装hexo</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br><span class="line">$ hexo init mywebdaily # mywebdaily是博客文件夹名可以自己指定</span><br><span class="line">$ cd mywebdaily #进入该文件夹</span><br><span class="line">$ npm install #这个操作功能是补全依赖环境</span><br></pre></td></tr></table></figure>
-
-
-
-<p>新建完成后，指定文件夹的目录如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml   </span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds </span><br><span class="line">├── <span class="built_in">source</span>  </span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-发布文章"><a href="#2-发布文章" class="headerlink" title="2. 发布文章"></a>2. 发布文章</h2><h3 id="新建一篇文章"><a href="#新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;博客文章文件名&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>或新建和复制md文件放到<br><code>/source/_posts</code>文件夹或其子文件夹中</p>
-<p>文章要按照规定格式书写<br>开头部分 可以按标准写入标签、分类、以便归档<br>这里写的标签会自动汇集到<code>tags</code>页面上</p>
-<p>举个例子🌰</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: “github+hexo搭建个人博客”</span><br><span class="line">date: 2021-11-14 22:17:17</span><br><span class="line">tags:</span><br><span class="line">- 实战</span><br><span class="line">category:  </span><br><span class="line">- 技术杂谈 </span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<h3 id="发布运行"><a href="#发布运行" class="headerlink" title="发布运行"></a>发布运行</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean #清除页面缓存</span><br><span class="line">hexo g #生成静态网页</span><br><span class="line">hexo s#启动网页服务 或</span><br><span class="line">hexo d # 部署网站命令，d是deploy的缩写.部署到github仓库中</span><br></pre></td></tr></table></figure>
-
-<p>完成后，打开浏览器，在地址栏输入你的放置个人网站的仓库路径，即 <a href="https://link.zhihu.com/?target=http://xxxx.github.io">http://xxxx.github.io</a> (知乎排版可能会出现”http://“字样，参考下图) 比如我的xxxx就是我的GitHub用户名：</p>
-<p><a target="_blank" rel="noopener" href="https://robinwang825.github.io/">https://robinwang825.github.io</a></p>
-<p>你就会发现你的博客已经上线了，可以在网络上被访问了。</p>
-<h2 id="文件目录解释"><a href="#文件目录解释" class="headerlink" title="文件目录解释"></a>文件目录解释</h2><p><code>_config.yml</code><br>网站的配置信息，您可以在此配置大部分的参数。<br><code>package.json</code><br>应用程序的信息。<br>EJS、Stylus和 Markdown renderer 已默认安装，您可以自由移除。<br><code>scaffolds</code><br>模版文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。<br>Hexo的模板是指在新建的markdown文件中默认填充的内容。<br>例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。<br><code>source</code><br>资源文件夹是存放用户资源的地方。<br>除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。<br>Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。<br>也就是你写的markdown存在这里面就会自动被包含到博客页面。<br><code>themes</code><br>主题文件夹。Hexo的博客主题存在这里面，你可以去网上下载好看的主题或者自己写。</p>
-<h1 id="三、hexo常见问题"><a href="#三、hexo常见问题" class="headerlink" title="三、hexo常见问题"></a>三、hexo常见问题</h1><h2 id="1-hexo-init卡顿问题"><a href="#1-hexo-init卡顿问题" class="headerlink" title="1. hexo init卡顿问题"></a>1. hexo init卡顿问题</h2><p>解决 hexo init 卡顿问题 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a409601734f1">https://www.jianshu.com/p/a409601734f1</a></p>
-<h2 id="2-Hexo部署出现错误err-Error-Spawn-failed解决方式"><a href="#2-Hexo部署出现错误err-Error-Spawn-failed解决方式" class="headerlink" title="2. Hexo部署出现错误err: Error: Spawn failed解决方式"></a>2. Hexo部署出现错误err: Error: Spawn failed解决方式</h2><p>部署过程中可能会出现错误</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">fatal:</span> unable to access <span class="string">&#x27;https://github.com/a956551943/a956551943.github.io/&#x27;</span>: Encountered <span class="keyword">end</span> of file</span><br><span class="line">FATAL &#123;</span><br><span class="line">  <span class="symbol">err:</span> <span class="symbol">Error:</span> Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (<span class="regexp">/usr/local</span><span class="regexp">/src/hexo</span><span class="regexp">/hanyubolg/node</span>_modules/hexo-util/lib/spawn.<span class="symbol">js:</span><span class="number">51</span><span class="symbol">:</span><span class="number">21</span>)</span><br><span class="line">      at ChildProcess.emit (events.<span class="symbol">js:</span><span class="number">376</span><span class="symbol">:</span><span class="number">20</span>)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (internal/child_process.<span class="symbol">js:</span><span class="number">277</span><span class="symbol">:</span><span class="number">12</span>) &#123;</span><br><span class="line">    <span class="symbol">code:</span> <span class="number">128</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something<span class="string">&#x27;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</span></span><br></pre></td></tr></table></figure>
-
-<p>解决方式一：（已经尝试，有效）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录,这个是自己博客所在文件夹</span></span><br><span class="line"><span class="built_in">cd</span> Desktop/mywebdaily  </span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line">rm -rf .deploy_git/</span><br><span class="line"></span><br><span class="line"><span class="comment">##执行</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-<p>解决方式二：有可能是你的git repo配置地址不正确,可以将http方式变更为ssh方式</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##进入站点根目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/src/hexo/hanyubolg/</span><br><span class="line"></span><br><span class="line"><span class="comment">##删除git提交内容文件夹</span></span><br><span class="line">vim _config.yml</span><br><span class="line"></span><br><span class="line"><span class="comment">##修改</span></span><br><span class="line">deploy:</span><br><span class="line"></span><br><span class="line"><span class="built_in">type</span>: git</span><br><span class="line"></span><br><span class="line">repo: https://github.com/yourname/yourname.github.io.git -&gt; git@github.com:a956551943/weixiaohui.github.io.git</span><br><span class="line"></span><br><span class="line">branch: master</span><br><span class="line"></span><br><span class="line"><span class="comment">##最后</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_28914371/article/details/112655689">安装 node_Mac下的Node.js安装教程</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3b30c4c846d1">命令行安装node.js</a></p>
-<p>gitee+hexo: <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43960457/article/details/108887889">https://blog.csdn.net/weixin_43960457/article/details/108887889</a></p>
-<p>hexo+git/gitee: <a target="_blank" rel="noopener" href="https://blog.csdn.net/L19iii/article/details/113077513">https://blog.csdn.net/L19iii/article/details/113077513</a></p>
-<p>hexo+服务器搭建个人博客：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6ae883f9291c">https://www.jianshu.com/p/6ae883f9291c</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/wxpay.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/09/17/%E5%9F%BA%E4%BA%8EBAP%E6%A1%86%E6%9E%B6%E5%92%8Cangr%E6%A1%86%E6%9E%B6%E7%9A%84%E8%AE%BA%E6%96%87/">基于BAP框架和angr框架的论文</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">实战</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">论文</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技术杂谈//" class="article-tag-list-link color5">技术杂谈</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">BAP框架</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">angr</a>
         		</li>
       		
 		</ul>
 	</div>
 
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/11/14/github-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2021/11/15/github%E6%8A%A5%E9%94%99remote-Support-for-password-authentication-was-removed-on-August-13-2021/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          github报错remote: Support for password authentication was removed on August 13, 2021.
-        
-      </div>
-    </a>
   
   
-    <a href="/2021/07/26/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第一个博客_快速用hexo搭建你的博客</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://example.com/2021/11/14/github-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/",
-  owner: 'RobinWang825',
-  repo: 'https://robinwang825.github.io',
-  oauth: {
-    client_id: '18b7f7c7e358f37af792',
-    client_secret: 'ee84ff646072c9fa14616599ca68227a33d425ac',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
-  
+    
 
 
           </div>
@@ -469,9 +247,9 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

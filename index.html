@@ -148,6 +148,107 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-基于BAP框架和angr框架的论文" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/09/17/%E5%9F%BA%E4%BA%8EBAP%E6%A1%86%E6%9E%B6%E5%92%8Cangr%E6%A1%86%E6%9E%B6%E7%9A%84%E8%AE%BA%E6%96%87/">基于BAP框架和angr框架的论文</a>
+    </h1>
+  
+
+        
+        ```html
+
+```
+
+<a href="/2022/09/17/%E5%9F%BA%E4%BA%8EBAP%E6%A1%86%E6%9E%B6%E5%92%8Cangr%E6%A1%86%E6%9E%B6%E7%9A%84%E8%AE%BA%E6%96%87/" class="archive-article-date">
+  	<time datetime="2022-09-17T11:10:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-17</time>
+</a>
+
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="github-污点分析工具"><a href="#github-污点分析工具" class="headerlink" title="github 污点分析工具"></a>github 污点分析工具</h1><h2 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h2><p>16年，TaintAll，IDA插件：<a target="_blank" rel="noopener" href="https://github.com/onura/TaintAll">https://github.com/onura/TaintAll</a></p>
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><p>2016年，<a target="_blank" rel="noopener" href="https://github.com/tobuer/StaticTaintAnalysis%EF%BC%8C%E9%9D%A2%E5%90%91%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8%E7%9A%84%E6%B1%A1%E7%82%B9%E6%95%B0%E6%8D%AE%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F">https://github.com/tobuer/StaticTaintAnalysis，面向软件安全的污点数据检测系统</a></p>
+<p>分析node.js的<a target="_blank" rel="noopener" href="https://github.com/nuprl/augur">https://github.com/nuprl/augur</a></p>
+<h1 id="基于BAP框架"><a href="#基于BAP框架" class="headerlink" title="基于BAP框架"></a>基于BAP框架</h1><p>16年，基于BAP的工具<a target="_blank" rel="noopener" href="https://github.com/TJAndHisStudents/TaintFlowAnalysis">https://github.com/TJAndHisStudents/TaintFlowAnalysis</a></p>
+<p>20年，基于BAP的工具 <a target="_blank" rel="noopener" href="https://github.com/0xchase/r2taint">https://github.com/0xchase/r2taint</a> </p>
+<h2 id="什么是BAP？"><a href="#什么是BAP？" class="headerlink" title="什么是BAP？"></a>什么是BAP？</h2><p>卡内基梅隆大学<strong>二进制分析平台</strong>（CMU <strong>BAP</strong>）是一套实用程序和库，用于分析机器代码表示中的程序。BAP支持x86，x86-64，ARM，MIPS，PowerPC和新的架构可以作为插件添加。</p>
+<p>BAP的中间语言是BIL。</p>
+<h2 id="相关论文"><a href="#相关论文" class="headerlink" title="相关论文"></a>相关论文</h2><p>2018，NDSS，Saluki: Finding Taint-style Vulnerabilities with Static Property Checking</p>
+<p>一个基于BAP框架开发的专利：<a target="_blank" rel="noopener" href="https://patentimages.storage.googleapis.com/90/d7/fd/38ba68e32ef479/CN105678169A.pdf">https://patentimages.storage.googleapis.com/90/d7/fd/38ba68e32ef479/CN105678169A.pdf</a></p>
+<h1 id="基于angr"><a href="#基于angr" class="headerlink" title="基于angr"></a>基于angr</h1><p>Karonte</p>
+<p>SaTC，路径选择部分是基于Ghidra库实现的</p>
+<h2 id="基于Ghidra"><a href="#基于Ghidra" class="headerlink" title="基于Ghidra"></a>基于Ghidra</h2><h3 id="腾讯科恩实验室-BinAbsInspector"><a href="#腾讯科恩实验室-BinAbsInspector" class="headerlink" title="腾讯科恩实验室 BinAbsInspector"></a>腾讯科恩实验室 BinAbsInspector</h3><p>Ref: <a target="_blank" rel="noopener" href="https://keenlab.tencent.com/zh/2022/04/20/2022-BinAbsInspector-public-release/">腾讯科恩实验室官方博客</a></p>
+<p>BinAbsInspector的设计思想来源于上世纪70年代诞生的经典程序分析理论<strong>“抽象解释”</strong>，在具体实现上，BinAbsInspector的分析基于**<a target="_blank" rel="noopener" href="https://ghidra-sre.org/">Ghidra</a><strong>所提供的</strong>中间表示Pcode<strong>上。通过设计合适的抽象域，实现其上的多种运算，完成相关Pcode的操作语义，执行流敏感（flow-sensitive）和上下文敏感（context-sensitive）的过程间分析，同时加入</strong>静态污点分析**的能力，完成对程序运行时状态的抽象估计。基于上述分析所得的抽象数据流信息对多种漏洞建模，最终实现对二进制漏洞的静态扫描。</p>
+<p>对于程序的抽象方法，我们主要参考了经典论文[《WYSINWYX: What you see is not what you eXecute》<a target="_blank" rel="noopener" href="https://dl.acm.org/doi/pdf/10.1145/1749608.1749612">8] </a>中的做法并加以改良、简化和提升。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">论文</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">BAP框架</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">angr</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/09/17/%E5%9F%BA%E4%BA%8EBAP%E6%A1%86%E6%9E%B6%E5%92%8Cangr%E6%A1%86%E6%9E%B6%E7%9A%84%E8%AE%BA%E6%96%87/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-略读论文" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -961,6 +1062,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">整型溢出漏洞</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">BAP框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">angr</a>
               </li>
             
             <div class="clearfix"></div>
