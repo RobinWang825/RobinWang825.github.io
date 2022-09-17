@@ -6,14 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2022 | Robin&#39;s Blog</title>
+  <title>略读论文 | Robin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Robin&#39;s Blog">
-<meta property="og:url" content="http://example.com/archives/2022/index.html">
+  <meta name="description" content="2009 NDSS： IntScope 工具：IntScope  漏洞：整型溢出漏洞  技术：静态分析（符号执行 + 数据流分析）自动检测缺少合适输入验证的程序路径。  论文笔记ref: http:&#x2F;&#x2F;cgnail.github.io&#x2F;notes&#x2F;intscope&#x2F;  作者：王铁磊（TaintScope, S&amp;P2010, 也是他的作品）作者个人主页   作者相关工作（整数相关） 2009">
+<meta property="og:type" content="article">
+<meta property="og:title" content="略读论文">
+<meta property="og:url" content="http://example.com/2022/09/17/%E7%95%A5%E8%AF%BB%E8%AE%BA%E6%96%87/index.html">
 <meta property="og:site_name" content="Robin&#39;s Blog">
+<meta property="og:description" content="2009 NDSS： IntScope 工具：IntScope  漏洞：整型溢出漏洞  技术：静态分析（符号执行 + 数据流分析）自动检测缺少合适输入验证的程序路径。  论文笔记ref: http:&#x2F;&#x2F;cgnail.github.io&#x2F;notes&#x2F;intscope&#x2F;  作者：王铁磊（TaintScope, S&amp;P2010, 也是他的作品）作者个人主页   作者相关工作（整数相关） 2009">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-09-17T03:56:49.000Z">
+<meta property="article:modified_time" content="2022-09-17T04:16:41.862Z">
 <meta property="article:author" content="wwjloves2study">
+<meta property="article:tag" content="论文">
+<meta property="article:tag" content="固件">
+<meta property="article:tag" content="二进制">
+<meta property="article:tag" content="整型溢出漏洞">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Robin&#39;s Blog" type="application/atom+xml">
@@ -146,24 +154,24 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-略读论文" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      略读论文
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	```html
+
+        
+        ```html
+
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
 ```
 
@@ -172,16 +180,116 @@
 </a>
 
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/17/%E7%95%A5%E8%AF%BB%E8%AE%BA%E6%96%87/">略读论文</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="2009-NDSS：-IntScope"><a href="#2009-NDSS：-IntScope" class="headerlink" title="2009 NDSS： IntScope"></a>2009 NDSS： IntScope</h1><ul>
+<li><p>工具：<a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/wp-content/uploads/2017/09/wang.pdf">IntScope</a></p>
+</li>
+<li><p>漏洞：整型溢出漏洞</p>
+</li>
+<li><p>技术：静态分析（符号执行 + 数据流分析）自动检测缺少合适输入验证的程序路径。</p>
+</li>
+<li><p>论文笔记ref: <a target="_blank" rel="noopener" href="http://cgnail.github.io/notes/intscope/">http://cgnail.github.io/notes/intscope/</a></p>
+</li>
+<li><p>作者：王铁磊（<strong>TaintScope</strong>, S&amp;P2010, 也是他的作品）<a target="_blank" rel="noopener" href="https://sites.google.com/site/tieleiwang/">作者个人主页</a></p>
+</li>
+</ul>
+<h2 id="作者相关工作（整数相关）"><a href="#作者相关工作（整数相关）" class="headerlink" title="作者相关工作（整数相关）"></a>作者相关工作（整数相关）</h2><ul>
+<li>2009, NDSS, <strong>IntScope</strong>：<strong>使用符号执行自动检测 X86 二进制文件中的整数溢出漏洞</strong>。 </li>
+<li>2010，S&amp;P，<strong>TaintScope</strong>：<strong>用于自动软件漏洞检测的校验和感知定向模糊测试工具</strong>。</li>
+<li>2010，ESORICS，<strong>IntPatch：在编译时自动修复整数溢出到缓冲区溢出漏洞</strong>。</li>
+<li>2011，JOCS期刊，<strong>Using Type Analysis in Compiler to Eliminate Integer-Overflow-to-Buffer-Overflow Threat</strong>. <strong>在编译器中使用类型分析来消除整数溢出到缓冲区溢出威胁</strong>。</li>
+</ul>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Intscope是专门针对整数溢出漏洞的静态分析工具。没有一个基于fuzz的二进制代码分析是专门针对整数溢出的，而且即使fuzzing工具可以探索所有的程序路径，漏洞还是可能无法重现，如果它没有生成对应的输入的话。</p>
+<p>大部分一致的整数溢出漏洞都是由于不完全或者不恰当的输入验证（incomplete or improper input validation）造成的。</p>
+<p>整数漏洞还有很多，除了溢出之外，还有assignment truncation, integer underflow, signedness error等，IntScope只关注溢出问题，因为它占了所有整数漏洞中约70%的数量。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
+<li>在<strong>类SSA的IR基础</strong>上符号执行x86二进制文件</li>
+<li>利用<strong>污点分析</strong>，不仅跟踪污染属性的传播，也对被污染数据的准确边界建模</li>
+<li>使用<strong>lazy checking</strong>，并不检查所有算术操作，<strong>只检查出现在敏感点的被污染的符号值</strong>（如<code>malloc, alloca</code>是否可能在路径约束条件下溢出。</li>
+</ul>
+<p>用IDA Pro反编译，然后<strong>翻译成自己的IR——PANDA。</strong>检测到了所有已知的整数溢出漏洞，并发现了超过20个新的整数溢出漏洞（如CVE-2008-4201, FrSIRT/ADV-2008-2919）出现在QEMU、Xen、Xine、MPlayer和VLC中。这些漏洞都用他们自己的动态测试工具证实过了。</p>
+<h2 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h2><ul>
+<li>针对整数溢出的污点分析+路径敏感符号执行分析；</li>
+<li>PANDA中间表示，基于IDAPro的结果和符号执行引擎；</li>
+<li>实现了IntScope，发现现实世界的漏洞。</li>
+</ul>
+<h2 id="整型溢出漏洞分析挑战"><a href="#整型溢出漏洞分析挑战" class="headerlink" title="整型溢出漏洞分析挑战"></a>整型溢出漏洞分析挑战</h2><ul>
+<li><p>缺少类型信息。对于signed int和unsigned int，同样的数值会导致不同的结果（溢出或者不溢出）。</p>
+<p>mov eax, x; // eax = x </p>
+<p>add eax, 2; // eax = eax + 2 %js target</p>
+</li>
+<li><p>区分有益的溢出。如语句 <code>if (x &gt;= -2 \&amp;\&amp; x&lt;= 0x7ffffffd)</code>会被GCC-4.2.0翻译成上面的形式，此时如果 <code>x = 0x7fffffff</code>，则会产生溢出，但GCC使用这个溢出化简掉了一条比较指令，是无害的。</p>
+</li>
+<li><p>路径爆炸。溢出的主要原因是不合适的检查，这需要对程序路径进行分析（路径敏感），然而软件中的路径数量过于庞大，尽管可以采用函数摘要（function summaries）降低数量级，但仍然是个问题</p>
+</li>
+</ul>
+<h2 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h2><p>ntScope分为两个部分：程序预处理和溢出检测。</p>
+<h3 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h3><p><strong>预处理</strong>分为三个组件：Decompiler, Component Extractor, Profile Constructor。首先Decompiler将程序P反汇编，得到类SSA的IR，PANDA描述，同时构建控制流图CFG和调用图CG。然后利用Component Extractor和Profile Constructor组件计算控制流图的片段G’，G’包含从源函数点到汇点函数的路径。G’为预处理部分的输出。</p>
+<p>Decompiler采用了它们内部开发的Bestar，该反编译器利用了IDA Pro作为前端执行反汇编、识别控制流结构，之后翻译成PANDA。</p>
+<h3 id="溢出检测"><a href="#溢出检测" class="headerlink" title="溢出检测"></a>溢出检测</h3><p>第二部分溢出检测分为四个组件：Integer Overflow Checker, Path Validator, Symbolic Execution Engine, Symbolic Memory Environment。首先用深度优先搜索遍历G’，它维护着符号内存环境，并符号执行二进制代码，以PANDA的形式。同时，跟踪污染数据，在每个分支点，由Path Validator组件检查该分支在当前路径约束下是否可达，如果两条路径均可达，则fork出一个额外的执行并模拟每条路径。遇到被污染数据出现在汇点时，则由Integer Overflow Checker组件实施约束检查，一旦被污染值能够溢出，则将其路径记为可疑并输出。</p>
+<ul>
+<li><p>Symbolic Execution Engine基于GiNaC开发，GiNaC是一个使用C++的开源的符号计算框架。使用它可以很方便的描述和操作符号表达式。</p>
+</li>
+<li><p>Integer Overflow Checker, Path Validator基于STP开发，用于处理符号约束。关键是STP支持符号敏感（signed/unsigned）的关系操作。</p>
+</li>
+<li><p><strong>PANDA的设计</strong>。为什么要采用IR？x86指令集太复杂，数目众多，很多都有副作用；没有记录变量；需要推导、记录符号地址的相互关系以跟踪被污染数据的扩散。PANDA区分了符号数比较和无符号数的比较。PANDA有两种变量：<code>mem</code>型和<code>val</code>型。前者对应寄存器或者内存，可以多次赋值，但只能作为左值；后者表示内存地址中储存的值，只能作为右值。</p>
+</li>
+<li><p><strong>内存建模</strong>。模拟程序执行需要构造符号内存空间，维护符号内存地址和符号值。IntScope使用了三种映射关系。<strong>M</strong>：符号地址到变量名的映射；<strong>ST</strong>：变量名到符号值以及其它信息的映射，如位长（如qword, dword, word, byte）、类型（如<em>mem</em>型变量或<em>val</em>型变量）；<strong>VT</strong>：符号值到值属性的映射（如该值是否被污染）。是否被污染依赖于变量的当前值，如果多个变量拥有相同的被污染值，则一旦它们中间的一个被彻底的检查，则所有变量都是可信的。</p>
+</li>
+<li><p><strong>执行策略</strong>。从入口点出发，探索所有可达路径，维护符号内存空间并更新之。</p>
+<ul>
+<li>遇到分支时，两个分支都检查，如果可达则继续执行。</li>
+<li><strong>间接跳转的操作数</strong>如果是地址，则继续执行，若是符号值则终止。</li>
+<li><strong>对于调用指令</strong>，实施进程间分析，模拟函数调用栈。</li>
+<li>对于<strong>和污染数据扩散相关的函数，</strong>实施函数摘要。如对于<code>read, fread</code>等函数，对其参数<code> buffer</code>做被污染的标记。</li>
+<li><strong>对于循环，这是静态分析中的难点。</strong>如果边界是符号变量，只对其中的分支遍历一遍；如果边界是常数，尽可能准确地模拟之</li>
+<li><strong>块内存操作</strong>（如<code>strncpy, memcpy, memmove</code>等）在其参数<code>size</code>为符号值时比较难办，比如<code>memcpy(dst, src, n)</code>中的<code>n</code>若未确定，则无法对<code>dst</code>的访问进行检查。由于IntScope只关心污点的传播，所以如果<code>src</code>是被污染的缓冲，则<code>dst</code>也是被污染的，从地址<code>dst</code>开始的值都给个被污染的值即可。</li>
+</ul>
+</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -205,71 +313,122 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/09/17/%E7%95%A5%E8%AF%BB%E8%AE%BA%E6%96%87/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	```html
-
-```
-
-<a href="/2022/09/15/%E6%B1%A1%E7%82%B9%E5%88%86%E6%9E%90/" class="archive-article-date">
-  	<time datetime="2022-09-15T11:18:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-15</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2022/09/15/%E6%B1%A1%E7%82%B9%E5%88%86%E6%9E%90/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">固件+污点分析+静态</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/15/%E6%B1%A1%E7%82%B9%E5%88%86%E6%9E%90/">固件+污点分析+静态</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">论文</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">污点分析</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">固件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://example.com/2022/09/17/%E7%95%A5%E8%AF%BB%E8%AE%BA%E6%96%87/",
+  owner: 'RobinWang825',
+  repo: 'https://robinwang825.github.io',
+  oauth: {
+    client_id: '18b7f7c7e358f37af792',
+    client_secret: 'ee84ff646072c9fa14616599ca68227a33d425ac',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -303,8 +462,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
